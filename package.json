@@ -1,0 +1,14 @@
+{
+    "name": "wpal_front",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "start:client": "yarn --cwd client start",
+        "start:server": "yarn --cwd server dev",
+        "start:all": "concurrently \"yarn start:client\" \"yarn start:server\""
+    },
+    "devDependencies": {
+        "concurrently": "^9.1.2"
+    }
+}
