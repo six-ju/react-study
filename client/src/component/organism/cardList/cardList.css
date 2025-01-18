@@ -1,0 +1,30 @@
+.cardList {
+  display: flex;
+  margin-bottom: 290px;
+  justify-content: start;
+  height: 30px;
+  padding: 0px 25%;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 100%;
+}
+
+.head-eng-title {
+  border-bottom: 2px solid red;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.head-title {
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.cardList .eachCard {
+  display: flex;
+  width: 100%;
+}
+
+.cardList > div {
+  gap: 30px;
+}
