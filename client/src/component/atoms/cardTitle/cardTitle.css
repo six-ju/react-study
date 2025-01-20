@@ -1,5 +1,6 @@
 .cardTitle {
-  font-size: 18px;
-  font-weight: 500;
-  margin: 16px 0 8px;
+    font-size: 15px;
+    margin: 4px 0px;
+    display: flex;
+    color: #1e2d5f;
 }
