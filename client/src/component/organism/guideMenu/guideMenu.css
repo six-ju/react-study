@@ -1,0 +1,117 @@
+.view-all-fares,
+.regular-comprehensive-fare,
+.regular-special-fare,
+.specific-date-special-fare {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.guideMenu {
+    background-color: white;
+    position: absolute;
+    top: 97px;
+    z-index: 1;
+    width: 100%;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 150px;
+    padding: 40px 0px;
+
+    /* 애니메메이션 */
+    opacity: 0; 
+    transform: translateY(0px); 
+    transition: opacity 0.3s ease, transform 0.3s ease; 
+
+    pointer-events: none; 
+}
+
+.guideMenu.show {
+    opacity: 1; /* 불투명해짐 */
+    transform: translateY(0); /* 원래 위치로 이동 */
+    pointer-events: auto;
+}
+
+.headerTitle {
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    margin: 25px 0px;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+.header-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: solid 1px #e2e2e2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#B7B7B7;
+    cursor: pointer;
+}
+
+/* 서브 메뉴 */
+.sub-menu{
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #848484;
+    margin-bottom: 14px;
+    font-size: 14px;
+    transition: color 0.2s ease; 
+}
+
+.sub-menu:hover{
+    color: var(--color-red);
+}
+
+/* 전체 요금 보기 */
+.view-all-fares:hover > .header-icon{
+    color: white;
+    background-color: var(--color-red);
+}
+
+.view-all-fares:hover > .headerTitle{
+    color: var(--color-red);
+}
+
+/* 정규 포괄 요금금 */
+.regular-comprehensive-fare:hover > .header-icon{
+    color: white;
+    background-color: var(--color-red);
+}
+
+.regular-comprehensive-fare:hover > .headerTitle{
+    color: var(--color-red);
+}
+
+/* 정규 특가 요금 */
+.regular-special-fare:hover > .header-icon{
+    color: white;
+    background-color: var(--color-red);
+}
+
+.regular-special-fare:hover > .headerTitle{
+    color: var(--color-red);
+}
+
+/* 특정일 특가 */
+.specific-date-special-fare:hover > .header-icon{
+    color: white;
+    background-color: var(--color-red);
+}
+
+.specific-date-special-fare:hover > .headerTitle{
+    color: var(--color-red);
+}
+

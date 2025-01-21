@@ -14,10 +14,10 @@ const CardList = ({ cards }) => {
             </div>
             <div className='eachCard'>
                 {cards[0].theme === 'support' ? (
-                  <SupportCard />
+                    <SupportCard />
                 ) : (
-                  cards.map((card, index) => {
-                    return (
+                    cards.map((card, index) => {
+                        return (
                             <Card
                                 key={index}
                                 image={card.image}
