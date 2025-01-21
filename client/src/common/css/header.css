@@ -42,11 +42,11 @@
     padding: 0px 0px 0 120px;
 }
 
-.header-nav-group > div:hover {
+.header-nav-group > .header-menu-hover:hover {
     border-bottom: 3px solid white;
 }
 
 .header-nav-group > div {
     padding: 36px 0px;
-    width: auto;
+    width: 100%;
 }

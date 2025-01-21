@@ -1,6 +1,8 @@
 .cardTitle {
-    font-size: 15px;
+    font-size: 16px;
     margin: 4px 0px;
     display: flex;
     color: #1e2d5f;
+    font-weight: 700;
+    font-family: 'Noto Sans KR', sans-serif;
 }

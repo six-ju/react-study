@@ -7,16 +7,10 @@ import GroupMenu from './organism/groupMenu/groupMenu';
 
 function Header() {
     const [showNoticeMenu, setIsHoveredNotice] = useState(false);
+    console.log(showNoticeMenu);
     const [showGuideMenu, setIsHoveredGuide] = useState(false);
     const [showRequestMenu, setIsHoveredRequest] = useState(false);
     const [showGroupMenu, setIsHoveredGroup] = useState(false);
-
-    setTimeout(() => {
-        setIsHoveredNotice(false);
-        setIsHoveredGuide(false);
-        setIsHoveredRequest(false);
-        setIsHoveredGroup(false);
-    }, 100);
 
     return (
         <div className='header'>
@@ -24,21 +18,43 @@ function Header() {
                 <div className='header-logo'></div>
             </div>
             <div className='header-nav-group'>
-                <div className='header-notice' onMouseEnter={() => setIsHoveredNotice(true)}>
+                <div
+                    className='header-notice header-menu-hover'
+                    onMouseOver={() => setIsHoveredNotice(true)}
+                    onMouseOut={() => setIsHoveredNotice(false)}
+                >
+                    <NoticeMenu isVisible={showNoticeMenu} />
                     공지사항
                 </div>
-                <div className='header-fare-guide' onMouseEnter={() => setIsHoveredGuide(true)}>운임안내</div>
-                <div className='header-service-request' onMouseEnter={() => setIsHoveredRequest(true)}>서비스요청</div>
-                <div className='header-group-quote' onMouseEnter={() => setIsHoveredGroup(true)}>단체견적/발권</div>
+                <div
+                    className='header-fare-guide header-menu-hover'
+                    onMouseOver={() => setIsHoveredGuide(true)}
+                    onMouseOut={() => setIsHoveredGuide(false)}
+                >
+                    <GuideMenu isVisible={showGuideMenu} />
+                    운임안내
+                </div>
+                <div
+                    className='header-service-request header-menu-hover'
+                    onMouseOver={() => setIsHoveredRequest(true)}
+                    onMouseOut={() => setIsHoveredRequest(false)}
+                >
+                    <RequestMenu isVisible={showRequestMenu} />
+                    서비스요청
+                </div>
+                <div
+                    className='header-group-quote header-menu-hover'
+                    onMouseOver={() => setIsHoveredGroup(true)}
+                    onMouseLeave={() => setIsHoveredGroup(false)}
+                >
+                    <GroupMenu isVisible={showGroupMenu} />
+                    단체견적/발권
+                </div>
             </div>
             <div className='header-user-group'>
                 <div className='header-mypage hide'>마이페이지</div>
                 <div className='header-login'>로그인</div>
             </div>
-            <NoticeMenu isVisible={showNoticeMenu} />
-            <GuideMenu isVisible={showGuideMenu} />
-            <RequestMenu isVisible={showRequestMenu} />
-            <GroupMenu isVisible={showGroupMenu} />
         </div>
     );
 }

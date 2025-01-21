@@ -2,19 +2,10 @@ import React, { useEffect, useState } from 'react';
 import './guideMenu.css';
 
 const GuideMenu = ({ isVisible }) => {
-    const [internalVisible, setInternalVisible] = useState(isVisible); // 내부 상태 관리
 
-    useEffect(() => {
-        if (isVisible) {
-            console.log(isVisible);
-            console.log(internalVisible);
-            setInternalVisible(true); // 외부에서 isVisible이 true로 변경되면 메뉴 표시
-        }
-    }, [isVisible]);
     return (
         <div
-            className={`guideMenu ${internalVisible ? 'show' : ''}`}
-            onMouseLeave={() => setInternalVisible(false)}
+            className={`guideMenu ${isVisible ? 'show' : ''}`}
         >
             <div className='view-all-fares'>
                 <i className='fa-solid fa-bars fa-lg header-icon'></i>

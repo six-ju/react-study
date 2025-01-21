@@ -2,20 +2,8 @@ import React, { useEffect, useState } from 'react';
 import './requestMenu.css';
 
 const RequestMenu = ({ isVisible }) => {
-    const [internalVisible, setInternalVisible] = useState(isVisible); // 내부 상태 관리
-
-    useEffect(() => {
-        if (isVisible) {
-            console.log(isVisible);
-            console.log(internalVisible);
-            setInternalVisible(true); // 외부에서 isVisible이 true로 변경되면 메뉴 표시
-        }
-    }, [isVisible]);
     return (
-        <div
-            className={`requestMenu ${internalVisible ? 'show' : ''}`}
-            onMouseLeave={() => setInternalVisible(false)}
-        >
+        <div className={`requestMenu ${isVisible ? 'show' : ''}`}>
             <div className='wait-request'>
                 <i className='fa-regular fa-calendar-check fa-lg header-icon'></i>
                 <a className='headerTitle' href=''>
